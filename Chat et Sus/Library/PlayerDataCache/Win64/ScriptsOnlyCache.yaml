@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - PlayerSetup
     Mirror.Components.dll:
     - Mirror.NetworkTransform
+    - Mirror.NetworkTransformChild
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -54,6 +55,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1464}
+    - Class: 114
+      Script: {instanceID: 1534}
     - Class: 114
       Script: {instanceID: 2064}
     - Class: 114
