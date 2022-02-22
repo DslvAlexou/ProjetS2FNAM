@@ -521,6 +521,7 @@ MonoBehaviour:
   - {fileID: 1947855406823253783}
   - {fileID: 1947855407722177123}
   - {fileID: 1947855407722177132}
+  playerUIPrefab: {fileID: 4601051185508566450, guid: 45e1aec2c7c0085418979c6dbf7a2bd6, type: 3}
 --- !u!136 &475371412988141640
 CapsuleCollider:
   m_ObjectHideFlags: 0

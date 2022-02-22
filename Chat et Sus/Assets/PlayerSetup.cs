@@ -8,6 +8,10 @@ public class PlayerSetup : NetworkBehaviour
 
     Camera sceneCamera;
 
+    [SerializeField]
+    private GameObject playerUIPrefab;
+    private GameObject playerUIInstance;
+
     private void Start()
     {
         if (!isLocalPlayer)
@@ -26,13 +30,19 @@ public class PlayerSetup : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
 
+            //Creation du UI du joueur local
+            playerUIInstance = Instantiate(playerUIPrefab);
+
         }
     }
     private void OnDisable()
     {
+        Destroy(playerUIInstance);
+
         if (sceneCamera != null)
         {
             sceneCamera.gameObject.SetActive(true);
         }
+        
     }
 }
