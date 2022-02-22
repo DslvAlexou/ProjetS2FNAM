@@ -566,8 +566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 0
-  sendInterval: 0.05
+  clientAuthority: 1
+  sendInterval: 0.1
   syncPosition: 1
   syncRotation: 1
   syncScale: 0
