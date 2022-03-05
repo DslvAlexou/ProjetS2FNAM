@@ -3,7 +3,6 @@
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonChat.dll"
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
--a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonUnityNetworking.Demos.dll"
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonRealtime.dll"
 -a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
