@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - Launcher
     - Menu
     - MenuManager
+    - PlayerListItem
+    - RoomListItem
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -14,8 +16,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -163,6 +163,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4660}
     - Class: 114
       Script: {instanceID: 4974}
+    - Class: 114
+      Script: {instanceID: 18144}
+    - Class: 114
+      Script: {instanceID: 27642}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1366,7 +1370,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 21914be3b0ec06bba9897d753c0cffc1
+      Hash: ca88a9dd8f8dc344c0da38e764174ffc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Launcher
@@ -1718,6 +1722,18 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: e0766a0e8938b34dbdc572ce4b274d5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomListItem
+  - hash:
+      serializedVersion: 2
+      Hash: e0766a0e8938b34dbdc572ce4b274d5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerListItem
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
