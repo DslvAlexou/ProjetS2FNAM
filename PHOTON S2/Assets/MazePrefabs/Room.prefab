@@ -613,7 +613,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7461491909638004574}
   - component: {fileID: 2597855369572816155}
-  - component: {fileID: -8671421422783064777}
   - component: {fileID: 701494636177528512}
   m_Layer: 0
   m_Name: Room
@@ -672,18 +671,6 @@ MonoBehaviour:
   - {fileID: 6117963041427848426}
   - {fileID: 2248634000728652947}
   - {fileID: 8317059155752046068}
---- !u!114 &-8671421422783064777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164342930243224599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62aa2559c8bdc7c46926c35af98af53a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &701494636177528512
 BoxCollider2D:
   m_ObjectHideFlags: 0
