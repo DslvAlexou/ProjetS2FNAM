@@ -23,6 +23,7 @@ ScriptsOnlyBuild:
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
@@ -96,77 +97,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1556}
+      Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1658}
+      Script: {instanceID: 1842}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 1896}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1926}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1930}
     - Class: 114
-      Script: {instanceID: 1806}
+      Script: {instanceID: 1990}
     - Class: 114
-      Script: {instanceID: 1978}
+      Script: {instanceID: 2162}
     - Class: 114
-      Script: {instanceID: 2122}
+      Script: {instanceID: 2304}
     - Class: 114
-      Script: {instanceID: 2230}
+      Script: {instanceID: 2412}
     - Class: 114
-      Script: {instanceID: 2278}
-    - Class: 114
-      Script: {instanceID: 2474}
-    - Class: 114
-      Script: {instanceID: 2600}
-    - Class: 114
-      Script: {instanceID: 2644}
+      Script: {instanceID: 2460}
     - Class: 114
       Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3394}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3184}
     - Class: 114
-      Script: {instanceID: 3886}
+      Script: {instanceID: 3278}
     - Class: 114
-      Script: {instanceID: 4058}
+      Script: {instanceID: 3578}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 3742}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 3800}
     - Class: 114
-      Script: {instanceID: 4152}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 4188}
+      Script: {instanceID: 4066}
     - Class: 114
-      Script: {instanceID: 4208}
+      Script: {instanceID: 4238}
     - Class: 114
-      Script: {instanceID: 4506}
+      Script: {instanceID: 4262}
     - Class: 114
-      Script: {instanceID: 4508}
+      Script: {instanceID: 4282}
     - Class: 114
-      Script: {instanceID: 4660}
+      Script: {instanceID: 4332}
     - Class: 114
-      Script: {instanceID: 4974}
+      Script: {instanceID: 4368}
     - Class: 114
-      Script: {instanceID: 18144}
+      Script: {instanceID: 4388}
     - Class: 114
-      Script: {instanceID: 27642}
+      Script: {instanceID: 4686}
+    - Class: 114
+      Script: {instanceID: 4688}
+    - Class: 114
+      Script: {instanceID: 4838}
+    - Class: 114
+      Script: {instanceID: 5150}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -716,6 +717,12 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
+      Hash: e0766a0e8938b34dbdc572ce4b274d5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomListItem
+  - hash:
+      serializedVersion: 2
       Hash: 267e1e00a8f1d106bd614339db235595
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1092,6 +1099,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e0766a0e8938b34dbdc572ce4b274d5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerListItem
   - hash:
       serializedVersion: 2
       Hash: 4e516d6d64d44446989426b8f725c6f8
@@ -1722,20 +1735,7 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: e0766a0e8938b34dbdc572ce4b274d5c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RoomListItem
-  - hash:
-      serializedVersion: 2
-      Hash: e0766a0e8938b34dbdc572ce4b274d5c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerListItem
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alex/Desktop/Projet S2/ProjetS2FNAM/PHOTON S2/Build/PHOTON
-    S2.exe
+  playerPath: C:/Users/berre/test222/ProjetS2FNAM/PHOTON S2/PHOTON S2.exe
