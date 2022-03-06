@@ -1,4 +1,7 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines'
+Base path: 'D:/MAXENCE DOCS/EPITA/2020.3.30f1/Editor/Data', plugins path 'D:/MAXENCE DOCS/EPITA/2020.3.30f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+<<<<<<< HEAD
+=======
 Cmd: shutdown
+>>>>>>> 6114395331e51c34e1f13a2434c48c35f7da6ade

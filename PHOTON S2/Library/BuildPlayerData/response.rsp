@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Assembly-CSharp.dll"
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonUnityNetworking.dll"
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonChat.dll"
@@ -13,6 +14,22 @@
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll"
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll"
 -a="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"
+=======
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Assembly-CSharp.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonUnityNetworking.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonChat.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonRealtime.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies\PhotonUnityNetworking.Utilities.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\Photon3Unity3D.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll"
+-a="C:\Users\Alex\Desktop\Projet S2\ProjetS2FNAM\PHOTON S2\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"
+>>>>>>> 15f9588aeda23ed61f3def3c213d4825fb00478d
 -s="C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine"
 -s="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Library\PlayerScriptAssemblies"
 -s="C:\Users\berre\test222\ProjetS2FNAM\PHOTON S2\Assets\Photon\PhotonLibs"
