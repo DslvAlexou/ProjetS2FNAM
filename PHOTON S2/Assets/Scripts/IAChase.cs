@@ -19,23 +19,46 @@ public class IAChase : MonoBehaviourPunCallbacks
     public LayerMask PlayerLayer;
     public float OnPlayerSenseRadius;
     Collider[] TestOverlap = null;
+    public int MaxDist;
+    AudioSource m_MyAudioSource;
+    public float speed = 1.0f;
 ///////////////////////////////////////////////////////////
 
 
 
     private void Start()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Lola"), Vector3.zero, Quaternion.identity,0);
+        m_MyAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        
+
         TestOverlap = Physics.OverlapSphere(transform.position, OnPlayerSenseRadius, PlayerLayer);
+        
+        if(Vector3.Distance(this.transform.position,playerPosition) >= MaxDist)
+        {
+            m_MyAudioSource.Play();
+        } 
 
         if (FoundPlayer)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref velocity, smoothTime);
+            this.transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref velocity, smoothTime);
+            playerPosition = Player.transform.position;
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = playerPosition - this.transform.position;
+
+            // The step size is equal to speed times frame time.
+            float singleStep = speed * Time.deltaTime;
+
+            // Rotate the forward vector towards the target direction by one step
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+            // Draw a ray pointing at our target in
+            Debug.DrawRay(transform.position, newDirection, Color.red);
+
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
         if (!FoundPlayer)

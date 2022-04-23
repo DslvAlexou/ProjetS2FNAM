@@ -6,26 +6,10 @@ using UnityEngine.AI;
 using System.IO;
 public class Lolaspawn : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
-    private bool spawn = false;
     void Start()
     {
-        if (spawn == false)
-        {
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Lola"), Vector3.zero, Quaternion.identity,0);
-            spawn = true;
-        }
+        Quaternion suu = Quaternion.Euler(-90, 0, 0);
+        Vector3 pos = new Vector3(5, 0, 5);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Lola"), pos, suu);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (spawn == false)
-        {
-            PhotonNetwork.Instantiate("Lola", Vector3.zero, Quaternion.identity);
-            spawn = true;
-        }
-    }
-
-
 }
