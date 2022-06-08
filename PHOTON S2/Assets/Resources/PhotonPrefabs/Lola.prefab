@@ -19,9 +19,10 @@ GameObject:
   - component: {fileID: 7695094029694622069}
   - component: {fileID: -5419233277521478525}
   - component: {fileID: 4122955319168665545}
-  m_Layer: 0
+  - component: {fileID: 6245662226427288274}
+  m_Layer: 6
   m_Name: Lola
-  m_TagString: Untagged
+  m_TagString: CAT
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
+  m_SynchronizeRotation: 0
   m_SynchronizeScale: 0
   m_UseLocal: 1
 --- !u!114 &2534028516163434551
@@ -175,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.34488034, y: 0.5801663, z: 0.52277476}
-  m_Center: {x: 0.000000019868216, y: -0.025803238, z: 0.26295808}
+  m_Size: {x: 0.34488034, y: 0.5801663, z: 0.41674393}
+  m_Center: {x: 0.000000019868216, y: -0.025803227, z: 0.31597352}
 --- !u!95 &7695094029694622069
 Animator:
   serializedVersion: 3
@@ -300,3 +301,29 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203323850848441759}
   m_Enabled: 1
+--- !u!114 &6245662226427288274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203323850848441759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c095fcce3e433248846a191fa56ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBar: {fileID: 0}
+  cameraHolder: {fileID: 0}
+  mouseSensitivity: 0
+  sprintSpeed: 0
+  walkSpeed: 0
+  jumpForce: 0
+  smoothTime: 0
+  Health: 3
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  OnPlayerSenseRadius: 0
+  MaxDist: 0
+  HealthBar: {fileID: 0}

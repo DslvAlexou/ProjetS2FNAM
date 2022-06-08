@@ -7,7 +7,7 @@ using System.IO;
 
 public class IAChase : MonoBehaviourPunCallbacks
 {
-    //public NavMeshAgent EnemyNav;
+
     GameObject Player = null;
     bool FoundPlayer = false;
     public PhotonView PlayerView;
@@ -43,7 +43,6 @@ public class IAChase : MonoBehaviourPunCallbacks
 
         if (FoundPlayer)
         {
-            this.transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref velocity, smoothTime);
             playerPosition = Player.transform.position;
             // Determine which direction to rotate towards
             Vector3 targetDirection = playerPosition - this.transform.position;
@@ -54,11 +53,12 @@ public class IAChase : MonoBehaviourPunCallbacks
             // Rotate the forward vector towards the target direction by one step
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-            // Draw a ray pointing at our target in
-            Debug.DrawRay(transform.position, newDirection, Color.red);
+          	Vector3 realdirection = new Vector3(newDirection[0],1f,newDirection[2]);
 
             // Calculate a rotation a step closer to the target and applies rotation to this object
-            transform.rotation = Quaternion.LookRotation(newDirection);
+            transform.rotation = Quaternion.LookRotation(realdirection);
+			Vector3 realplayerpos = new Vector3(playerPosition[0],0.06f,playerPosition[2]);
+			this.transform.position = Vector3.SmoothDamp(transform.position,realplayerpos , ref velocity, smoothTime);
         }
 
         if (!FoundPlayer)
