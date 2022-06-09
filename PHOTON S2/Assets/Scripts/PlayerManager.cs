@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
         {
             CreateController();
         }
+		
     }
 
     void CreateController()

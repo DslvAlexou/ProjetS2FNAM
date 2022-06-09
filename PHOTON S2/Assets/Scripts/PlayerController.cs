@@ -30,12 +30,10 @@ public class PlayerController : StaminaBar
 	
 	public LayerMask PlayerLayer;
 	public float OnPlayerSenseRadius;
-	Collider[] TestOverlap = null;
 	public int MaxDist;
 	Vector3 playerPosition = Vector3.zero;
 	public Slider HealthBar;
-	GameObject Player = null;
-	bool FoundPlayer = false;
+
 
     void Awake()
 	{
@@ -62,30 +60,6 @@ public class PlayerController : StaminaBar
 		Look();
 		Move();
 		Jump();
-		TestOverlap = Physics.OverlapSphere(transform.position, OnPlayerSenseRadius, PlayerLayer);
-		if (!FoundPlayer)
-		{
-			for (int i = 0; i < TestOverlap.Length; i++)
-			{
-				if (TestOverlap.GetValue(i) != null)
-				{
-					if (GameObject.FindGameObjectWithTag("CAT").GetInstanceID() == TestOverlap[0].gameObject.GetInstanceID())
-					{
-						Player = GameObject.FindGameObjectWithTag("CAT").gameObject;
-						playerPosition = Player.transform.position;
-						FoundPlayer = true;
-					}
-				}
-
-			}
-		}
-        
-		if(Vector3.Distance(this.transform.position,playerPosition) <= MaxDist)
-		{
-			Health -= 1;
-		}
-
-		HealthBar.value = Health;
 	}
 
 	void Look()
@@ -130,6 +104,22 @@ public class PlayerController : StaminaBar
 			return;
         }
 		rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+    }
+
+	private void OnTriggerEnter(Collider other)
+    {
+		if (other.gameObject.tag == "CAT")
+		{
+			Debug.Log("Do something here");
+        	Health -= 1;
+        	HealthBar.value = Health;
+		}
+		if (other.gameObject.name == "Lola")
+		{
+			Debug.Log("Do something here");
+        	Health -= 1;
+        	HealthBar.value = Health;
+		}
     }
 
 }

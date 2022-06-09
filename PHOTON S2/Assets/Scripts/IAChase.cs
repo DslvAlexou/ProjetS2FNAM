@@ -14,7 +14,7 @@ public class IAChase : MonoBehaviourPunCallbacks
     private Vector3 velocity = Vector3.zero;
     public float smoothTime = 0.3F;
     Vector3 playerPosition = Vector3.zero;
-
+    public int time;
 ///////////////////////////////////////////////////////////
     public LayerMask PlayerLayer;
     public float OnPlayerSenseRadius;
@@ -22,25 +22,50 @@ public class IAChase : MonoBehaviourPunCallbacks
     public int MaxDist;
     AudioSource m_MyAudioSource;
     public float speed = 1.0f;
+	Animator mAnimator;
 ///////////////////////////////////////////////////////////
-
+	private float nextActionTime = 0.0f;
+ 	public float period = 1f;
+	private bool wait = true;
 
 
     private void Start()
     {
+		mAnimator = GetComponent<Animator>();
         m_MyAudioSource = GetComponent<AudioSource>();
+		StartCoroutine(ExampleCoroutine());
+    }
+
+	IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(5);
+		wait=false;
     }
 
     void Update()
     {
+		if(wait)
+			StartCoroutine(ExampleCoroutine());
 
+		if(Time.time > nextActionTime)
+		{ 	
+			nextActionTime = Time.time + period;
+			smoothTime-=0.005f;
+		}
         TestOverlap = Physics.OverlapSphere(transform.position, OnPlayerSenseRadius, PlayerLayer);
-        
+		if (mAnimator != null)
+		{
+			if (smoothTime>=1)
+				{
+				mAnimator.SetBool("Walk",true);
+				}
+			if (smoothTime<1)
+				mAnimator.SetBool("Speed",true);
+		}
         if(Vector3.Distance(this.transform.position,playerPosition) >= MaxDist)
         {
             m_MyAudioSource.Play();
         } 
-
         if (FoundPlayer)
         {
             playerPosition = Player.transform.position;
@@ -53,7 +78,7 @@ public class IAChase : MonoBehaviourPunCallbacks
             // Rotate the forward vector towards the target direction by one step
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-          	Vector3 realdirection = new Vector3(newDirection[0],1f,newDirection[2]);
+          	Vector3 realdirection = new Vector3(newDirection[0],0f,newDirection[2]);
 
             // Calculate a rotation a step closer to the target and applies rotation to this object
             transform.rotation = Quaternion.LookRotation(realdirection);
@@ -77,6 +102,16 @@ public class IAChase : MonoBehaviourPunCallbacks
 
             }
         }
-
+    }
+	private void OnTriggerEnter(Collider other)
+    {
+		if (other.gameObject.tag == "PlayerMP")
+		{
+			mAnimator.SetTrigger("Touch");
+		}
+		if (other.gameObject.name == "PlayerController")
+		{
+			
+		}
     }
 }
