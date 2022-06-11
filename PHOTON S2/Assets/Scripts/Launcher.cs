@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -19,6 +20,9 @@ public class Launcher : MonoBehaviourPunCallbacks
 	[SerializeField] GameObject PlayerListItemPrefab;
 	[SerializeField] GameObject startGameButton;
 
+	public GameObject toggle1;
+	public bool pvp = true;
+
 	void Awake()
 	{
 		Instance = this;
@@ -26,9 +30,13 @@ public class Launcher : MonoBehaviourPunCallbacks
 
 	void Start()
 	{
+		
+
+
 		Debug.Log("Connecting to Master");
 		PhotonNetwork.ConnectUsingSettings();
 	}
+
 
 	public override void OnConnectedToMaster()
 	{
@@ -87,7 +95,16 @@ public class Launcher : MonoBehaviourPunCallbacks
 
 	public void StartGame()
 	{
-		PhotonNetwork.LoadLevel(1);
+		//CHANGER ICI SELON LE MODE DE JEU ET LE TOGGLE
+		if (pvp)
+        {
+			PhotonNetwork.LoadLevel(1);
+		}
+		else
+        {
+			PhotonNetwork.LoadLevel(3);
+		}
+		
 	}
 
 	public void LeaveRoom()
@@ -126,4 +143,6 @@ public class Launcher : MonoBehaviourPunCallbacks
 	{
 		Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
 	}
+
+	
 }
