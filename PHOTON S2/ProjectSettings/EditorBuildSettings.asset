@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: c9b34344d2a22fe46bb5998cc43edf18
+  - enabled: 1
+    path: Assets/Scenes/Maze PVP.unity
+    guid: 95ab1baeef0b4eb4f8a52da4119d7fad
   m_configObjects: {}
