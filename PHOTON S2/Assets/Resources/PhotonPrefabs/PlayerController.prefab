@@ -553,8 +553,8 @@ MonoBehaviour:
   MaxStamina: 500
   cameraHolder: {fileID: 5701582351506789241}
   mouseSensitivity: 3
-  sprintSpeed: 6
-  walkSpeed: 3
+  sprintSpeed: 7
+  walkSpeed: 5
   jumpForce: 200
   smoothTime: 0.15
   Health: 3
