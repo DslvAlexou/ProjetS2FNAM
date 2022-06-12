@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PlayerMP
   - CAT
+  - Can
+  - Can2
+  - Can3
   layers:
   - Default
   - TransparentFX

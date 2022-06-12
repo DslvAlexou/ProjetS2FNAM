@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 
     public float currentTime;
     public Text currentTimeText;
+    static public bool stop = false;
 
 
     void Start()
@@ -16,7 +17,10 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        currentTime += 1 * Time.deltaTime ;
-        currentTimeText.text = currentTime.ToString();
+        if (stop == false)
+        {
+            currentTime += 1 * Time.deltaTime;
+            currentTimeText.text = currentTime.ToString();
+        }
     }
 }

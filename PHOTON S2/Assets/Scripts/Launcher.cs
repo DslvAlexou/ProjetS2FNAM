@@ -6,6 +6,7 @@ using TMPro;
 using Photon.Realtime;
 using System.Linq;
 using UnityEngine.UI;
+using System.IO;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -30,9 +31,6 @@ public class Launcher : MonoBehaviourPunCallbacks
 
 	void Start()
 	{
-		
-
-
 		Debug.Log("Connecting to Master");
 		PhotonNetwork.ConnectUsingSettings();
 	}

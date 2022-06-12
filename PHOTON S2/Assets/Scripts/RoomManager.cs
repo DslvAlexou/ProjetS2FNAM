@@ -8,6 +8,7 @@ using System.IO;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
 	public static RoomManager Instance;
+	private bool Lola = false;
 
 	void Awake()
 	{
@@ -36,7 +37,22 @@ public class RoomManager : MonoBehaviourPunCallbacks
 	{
 		if (scene.buildIndex == 1) // We're in the game scene
 		{
-			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
+			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity); 
+			if (Lola == false)
+			 {
+			 	Quaternion suu = Quaternion.Euler(-90, 0, 0);
+			 	Vector3 pos = new Vector3(5, 0, 5);
+			 	PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "orange cat"), pos, suu);
+			 	Lola = true;
+			 }
+			// test lola spawn
+			// if (this.PhotonNetwork.NickName == "0001")
+			// {
+			// 	Quaternion suu = Quaternion.Euler(-90, 0, 0);
+			// 	Vector3 pos = new Vector3(5, 0, 5);
+			// 	PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "orange cat"), pos, suu);
+			// 	Lola = true;
+			// }
 		}
 	}
 }

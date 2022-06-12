@@ -10,11 +10,9 @@ public class PlayerController : StaminaBar
 {
 
 
-	[SerializeField] GameObject cameraHolder;
+	[SerializeField] public GameObject cameraHolder;
 
 	[SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
-
-
 	float verticalLookRotation;
 	bool grounded;
 	Vector3 smoothMoveVelocity;
@@ -33,12 +31,17 @@ public class PlayerController : StaminaBar
 	public int MaxDist;
 	Vector3 playerPosition = Vector3.zero;
 	public Slider HealthBar;
+	private float temps = 0;
+	
+	public Text DoA;
+	
 
 
-    void Awake()
+	void Awake()
 	{
 		rb = GetComponent<Rigidbody>();
 		PV = GetComponent<PhotonView>();
+		Camera cam = gameObject.GetComponent<Camera>();
 	}
 
     private void Start()
@@ -104,22 +107,40 @@ public class PlayerController : StaminaBar
 			return;
         }
 		rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+		if (Health == 0 & stop ==false)
+		{
+			stop = true;
+			temps = currentTime;
+			Camera cam = cameraHolder.GetComponent<Camera>();
+			Canvas Can = cameraHolder.GetComponent<Canvas>();
+			cam.clearFlags = CameraClearFlags.SolidColor;
+			cam.backgroundColor = Color.black;
+			int LayerIgnoreRaycast = LayerMask.NameToLayer("Default");
+			gameObject.layer = LayerIgnoreRaycast;
+			gameObject.tag = "Player";
+			cam.cullingMask = 0;
+			HealthBar.gameObject.SetActive(false);
+			staminaBar.gameObject.SetActive(false);
+			DoA.text = "Dead";
+		}
     }
 
-	private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-		if (other.gameObject.tag == "CAT")
+	    if (other.gameObject.tag == "CAT")
+	    {
+		    Health -= 1;
+		    HealthBar.value = Health;
+	    }
+
+	    if (other.gameObject.tag == "Can")
+	    {
+		    sprintSpeed += 1;
+	    }
+		if (other.gameObject.tag == "Can2")
 		{
-			Debug.Log("Do something here");
-        	Health -= 1;
-        	HealthBar.value = Health;
-		}
-		if (other.gameObject.name == "Lola")
-		{
-			Debug.Log("Do something here");
-        	Health -= 1;
-        	HealthBar.value = Health;
+			Health += 1;
+			HealthBar.value = Health;
 		}
     }
-
 }

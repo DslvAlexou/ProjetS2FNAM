@@ -50,7 +50,7 @@ public class IAChase : MonoBehaviourPunCallbacks
 		if(Time.time > nextActionTime)
 		{ 	
 			nextActionTime = Time.time + period;
-			smoothTime-=0.005f;
+			smoothTime -= 0.002f;
 		}
         TestOverlap = Physics.OverlapSphere(transform.position, OnPlayerSenseRadius, PlayerLayer);
 		if (mAnimator != null)
@@ -105,5 +105,10 @@ public class IAChase : MonoBehaviourPunCallbacks
 		{
 			mAnimator.SetTrigger("Touch");
 		}
+		if (other.gameObject.tag == "Can3")
+		{
+			smoothTime+=0.1f;
+		}
     }
+
 }

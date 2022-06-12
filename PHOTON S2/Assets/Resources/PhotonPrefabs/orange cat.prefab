@@ -246,14 +246,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerView: {fileID: 3322737242062037143}
-  smoothTime: 2
+  smoothTime: 1
   time: 0
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 8
   OnPlayerSenseRadius: 20
-  MaxDist: 3
-  speed: 1
+  MaxDist: 2
+  speed: 10
   period: 0.1
 --- !u!23 &3548273662985333594
 MeshRenderer:
@@ -321,7 +321,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4ecfdda815f4bd4fb0f5fe3e765fa2e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.171
+  m_Volume: 0.046
   m_Pitch: 1
   Loop: 0
   Mute: 0
